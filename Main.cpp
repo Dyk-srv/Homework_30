@@ -96,11 +96,11 @@ bool overwrite(const std::string& path, const std::string& str) {
 	in.close();
 	std::ofstream out;
 	out.open(path);
-	if (out.is_open()) {
-		out << str << '\n';
+	if (!out.is_open()) {
 		out.close();
-		return true;
+		return false;
 	}
+	out << str << '\n';
 	out.close();
-	return false;
+	return true;
 }

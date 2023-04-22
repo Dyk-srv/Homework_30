@@ -1,1 +1,1 @@
-Oranges and apples
+My new string
